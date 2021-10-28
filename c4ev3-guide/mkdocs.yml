@@ -1,0 +1,8 @@
+site_name: c4ev3 docs
+nav:
+    - Home: index.md
+    - About: about.md
+    - Installation: installation.md
+    - Compiling and Uploading: compiling_uploading.md
+    - Better API Documentation: api.md
+theme: readthedocs

@@ -1,0 +1,20 @@
+match Todo /MARK/
+autocmd VimEnter *        :20Lexplore<CR>TagbarToggle<CR>
+autocmd filetype cpp      call SetCppOptions()
+
+function !SetCppOptions()
+    let &g:makeprg="make d"
+	nn  <F5> <ESC>:wa<CR>:make!<CR>:copen<CR>
+	ino <F5> <ESC>:wa<CR>:make!<CR>:copen<CR>
+
+    let g:airline#extensions#clock#format = '%H:%M:%S'
+    let g:airline#extensions#clock#updatetime = 1000
+    let g:airline#extensions#clock#mode = 'elapsed'
+    ":30vs in.txt<CR>
+    "wincmd l
+    "bel term
+    "wincmd k
+    ":res 20
+endfunction
+
+" vim:ft=vim

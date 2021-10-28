@@ -1,0 +1,45 @@
+y0
+y1
+y2
+
+start at y2
+let blueDone = false
+let redDone = false
+
+if nodeColor[1][2] == 0 then
+    collect
+    deposit blue
+    blueDone = true
+    go back to y2
+    go to y1
+else
+    move forward and rotate 180 deg
+    go to y2
+    go to y1
+
+if nodeColor[1][1] == 0 then
+    collect
+    move until intersection
+    if !blueDone then
+        deposit blue
+        blueDone = true
+        go back to y2
+        go to y1
+        go to y0
+    else
+        deposit red
+        redDone = true
+        go to y0 facing south
+else
+    go to y0
+
+if nodeColor[1][0] == 0 then
+    collect
+    deposit red
+    redDone = true
+    go to y0 facing south
+
+assert at y0 facing south
+
+rotate 180 deg
+move until IN_2 black
